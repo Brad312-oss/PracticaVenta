@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Gestion de Productos</h1>
+    <form id="formProducto">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <button type="submit">Registrar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos"></tbody>
+    </table>
+    <script src="js/productoMain.js"></script>
+</body>
+</html>
