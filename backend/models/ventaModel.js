@@ -24,21 +24,21 @@ export const registrarVenta = (venta, callback) => {
                     callback(null, resultado);
                 });
             }
-        )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        );
+    });
+};
+export const obtenerVentas = (callback) => {
+    db.query (`
+        select v.id, 
+        c.nombre as cliente, 
+        p.nombre_prod as producto, 
+        v.cantidad, v.precio_unitario, v.total, v.fecha
+        from ventas v
+        join clientes c on v.id_cliente = c.id
+        join productos p on v.id_producto = p.id
+        order by v.fecha desc
+        `, (err, results) => {
+            if (err) return callback(err);
+        callback(null, results);
     })
-}
+};
