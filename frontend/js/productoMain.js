@@ -8,7 +8,7 @@ document.getElementById('formProducto').addEventListener('submit', async (e) => 
   const precio = document.getElementById('precio').value;
 
   try {
-    const respuesta_prod = await fetch(API_URL_PROD, {
+    const respuesta_prod = await fetch(API_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nombre, stock, precio })

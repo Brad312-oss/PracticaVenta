@@ -9,9 +9,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('../frontend/'));
 
-app.use(`/api/clientes`, clienteRoutes);
-app.use(`/api/productos`, productoRoutes);
-app.use(`/api/ventas`, ventaRoutesRoutes);
+app.use('/api/clientes', clienteRoutes);
+app.use('/api/productos', productoRoutes);
+app.use('/api/ventas', ventaRoutes);
 
 const PORT = 3000;
 

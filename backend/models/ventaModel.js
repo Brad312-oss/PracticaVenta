@@ -31,7 +31,7 @@ export const obtenerVentas = (callback) => {
     db.query (`
         select v.id, 
         c.nombre as cliente, 
-        p.nombre_prod as producto, 
+        p.nombre as producto, 
         v.cantidad, v.precio_unitario, v.total, v.fecha
         from ventas v
         join clientes c on v.id_cliente = c.id

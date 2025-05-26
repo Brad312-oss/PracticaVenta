@@ -2,7 +2,7 @@ const API_CLIENTES = 'http://localhost:3000/api/clientes';
 const API_PRODUCTOS = 'http://localhost:3000/api/productos';
 const API_VENTAS = 'http://localhost:3000/api/ventas';
 
-document.getElementById('formventa').addEventListener('submit', async (e) => {
+document.getElementById('formVenta').addEventListener('submit', async (e) => {
     e.preventDefault();
     const id_cliente = document.getElementById('cliente').value;
     const id_producto = document.getElementById('producto').value;
@@ -30,13 +30,13 @@ async function cargarClientesYProductos() {
 
     const clienteSelect = document.getElementById('cliente');
     clienteSelect.innerHTML = '<option value=""> Seleccione cliente </option>';
-    clientes.foreach ( c => {
+    clientes.forEach ( c => {
         clienteSelect.innerHTML += `<option value="${c.id}">${c.nombre}</option>`
     });
     const productoSelect = document.getElementById('producto');
     productoSelect.innerHTML = '<option value=""> Seleccione producto </option>';
-    productos.foreach ( c => {
-        productoSelect.innerHTML += `<option value="${p.id}">${p.nombre_prod} ( Stock: ${p.stock})</option>`
+    productos.forEach ( p => {
+        productoSelect.innerHTML += `<option value="${p.id}">${p.nombre} ( Stock: ${p.stock})</option>`
     });
 }
 

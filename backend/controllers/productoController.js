@@ -2,7 +2,7 @@ import { getProducto, addProducto } from '../models/productoModel.js';
 
 export const obtenerProductos = (req, res) => {
     getProducto ((err, resultados) => {
-        if (err) return req.status(500),json( { error: err.message});
+        if (err) return req.status(500).json( { error: err.message});
             res.json(resultados);
     });
 };
